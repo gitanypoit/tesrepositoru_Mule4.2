@@ -25,6 +25,21 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				<configuration>
+			<cloudHubDeployment>
+     			 <username>${username}</username>
+     			 <password>${password}</password>
+     			 <muleVersion>${mule.Version}</muleVersion>
+     			 <applicationName>${application.Name}</applicationName>
+      			<environment>${environment}</environment>
+      			<workers>${workers}</workers>
+      			<workerType>${workers.type}</workerType>
+      <skip>true</skip>
+      			<properties>
+        			<key>value</key>
+      			</properties>
+  		</cloudHubDeployment>
+			</configuration>
             </plugin>
 		</plugins>
 	</build>

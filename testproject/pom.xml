@@ -27,6 +27,7 @@
 				<extensions>true</extensions>
 				<configuration>
 			<cloudHubDeployment>
+ 				 <uri>https://anypoint.mulesoft.com</uri> 			
      			 <username>${username}</username>
      			 <password>${password}</password>
      			 <muleVersion>${mule.Version}</muleVersion>
@@ -35,6 +36,8 @@
       			<workers>${workers}</workers>
       			<workerType>${workers.type}</workerType>
       <skip>true</skip>
+            <skip>clean</skip>
+      
       			<properties>
         			<key>value</key>
       			</properties>

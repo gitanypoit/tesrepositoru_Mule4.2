@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    ANYPOINT= credentials('ANYPOINT')
+    ITDevOps= credentials('ITDevOps')
 }
   stages {
    stage('Build') {
@@ -15,7 +15,7 @@ pipeline {
     stage('Deploy') {
      step{
       withMaven(maven:'maven'){ 
-	sh 'mvn -f mule-jenkins-pipeline/pom.xml package deploy -Dusername=$ANYPOINT_USR  -Dpassword=$ANYPOINT_PWD --Denvironment=Sandbox -DmuleDeploy'
+	sh 'mvn -f mule-jenkins-pipeline/pom.xml package deploy -Dusername=$ANYPOINT_USR  -Dpassword=$ANYPOINT_PWD --Denvironment=DI -DmuleDeploy'
 
 		 }
 		}
